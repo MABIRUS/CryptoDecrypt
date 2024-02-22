@@ -1,0 +1,31 @@
+﻿<Window x:Class="CryptoDecrypt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptoDecrypt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="370">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="The source text:" VerticalAlignment="Center" FontSize="12" Margin="5"/>
+        <TextBox x:Name="tbSource" Height="70" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" />
+
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="🠁" VerticalAlignment="Center" FontSize="45"/>
+            <ComboBox x:Name="cbCipher" Width="200" Height="30" />
+            <Button x:Name="btnRun" Content="Run" FontSize="10" Height="30" Width="70" Margin="5"
+                    Click="btnRun_Click"/>
+            <TextBlock Text="🠃" VerticalAlignment="Center" FontSize="45" />
+        </StackPanel>
+
+        <TextBox x:Name="tbCrypted" Grid.Row="2" Height="70" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <TextBlock Grid.Row="2" Text="Encrypted text:" VerticalAlignment="Center" FontSize="12" Margin="5"/>
+    </Grid>
+</Window>
