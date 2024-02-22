@@ -19,9 +19,12 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="🠁" VerticalAlignment="Center" FontSize="45"/>
-            <ComboBox x:Name="cbCipher" Width="200" Height="30" />
-            <Button x:Name="btnRun" Content="Run" FontSize="10" Height="30" Width="70" Margin="5"
-                    Click="btnRun_Click"/>
+            <Button x:Name="btnDecrypt" Content="Decrypt" FontSize="10" Height="30" Width="70" Margin="5"
+                 Click="btnDecrypt_Click" IsEnabled="False"/>
+            <ComboBox x:Name="cbCipher" Width="120" Height="30"
+                      SelectionChanged="cbCipher_SelectionChanged"/>
+            <Button x:Name="btnEncrypt" Content="Encrypt" FontSize="10" Height="30" Width="70" Margin="5"
+                    Click="btnEncrypt_Click" IsEnabled="False"/>
             <TextBlock Text="🠃" VerticalAlignment="Center" FontSize="45" />
         </StackPanel>
 
