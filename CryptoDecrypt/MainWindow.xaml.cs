@@ -1,29 +1,56 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CryptoDecrypt
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
+         
+        List<string> cipherList = new List<string>()
+        {"Morse Code", "Caesar Cipher", "Vigenère Cipher", "Playfair Cipher", "Hill Cipher"};
+
         public MainWindow()
         {
             InitializeComponent();
+            cbCipher.ItemsSource = cipherList;
         }
 
-        private void btnRun_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnEncrypt_Click(object sender, RoutedEventArgs e) => tbCrypted.Text = cipherChoice(tbSource.Text);
 
+        private void btnDecrypt_Click(object sender, RoutedEventArgs e) => tbSource.Text = cipherChoice(tbCrypted.Text);
+
+        private void cbCipher_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!btnEncrypt.IsEnabled)
+                btnEncrypt.IsEnabled = true;
+                btnDecrypt.IsEnabled = true;
+        }
+
+
+        private string cipherChoice(string inputText)
+        {
+            Cipher cipher = new Cipher(inputText);
+
+            string outputText = string.Empty;
+
+            switch (cbCipher.SelectedIndex)
+            {
+                case 0:
+                    cipher.MorseCode();
+                    outputText = cipher.Text;
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
+
+            return outputText;
         }
     }
 }
