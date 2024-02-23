@@ -9,7 +9,7 @@ namespace CryptoDecrypt
 
         public Cipher(string text) => Text = text;
 
-        Regex MorseCodeRegex = new Regex(@"^[.-]+( +[.-]+)*$");
+        Regex MorseCipherRegex = new Regex(@"^[.-]+( +[.-]+)*$");
 
         private static readonly Dictionary<char, string> morseDictionary = new Dictionary<char, string>()
         {
@@ -27,9 +27,9 @@ namespace CryptoDecrypt
             {'/', "-..-."}, {'@', ".--.-."}
         };
 
-        public void MorseCode()
+        public void MorseCipher()
         {
-            if (MorseCodeRegex.IsMatch(Text))
+            if (MorseCipherRegex.IsMatch(Text))
             {
                 Dictionary<string, char> reverseMorseDictionary = morseDictionary.ToDictionary(x => x.Value, x => x.Key);
 
@@ -61,6 +61,21 @@ namespace CryptoDecrypt
                 }
                 Text = stringBuilder.ToString().Trim();
             }
+        }
+
+        public void CaesarCipher()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (char letter in Text.ToUpper())
+            {
+                if(letter >= 65 && letter <= 77)
+                    stringBuilder.Append((char)(letter + 13));
+                else if (letter > 77 && letter <= 90)
+                    stringBuilder.Append((char)(letter - 13));
+                else
+                    stringBuilder.Append(letter);
+            }
+            Text = stringBuilder.ToString().Trim();
         }
     }
 }
