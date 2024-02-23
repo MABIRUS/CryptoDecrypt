@@ -8,7 +8,7 @@ namespace CryptoDecrypt
     {
          
         List<string> cipherList = new List<string>()
-        {"Morse Code", "Caesar Cipher", "Vigenère Cipher", "Playfair Cipher", "Hill Cipher"};
+        {"Morse Cipher", "Caesar Cipher", "Vigenère Cipher", "Playfair Cipher", "Hill Cipher"};
 
         public MainWindow()
         {
@@ -37,10 +37,12 @@ namespace CryptoDecrypt
             switch (cbCipher.SelectedIndex)
             {
                 case 0:
-                    cipher.MorseCode();
+                    cipher.MorseCipher();
                     outputText = cipher.Text;
                     break;
                 case 1:
+                    cipher.CaesarCipher();
+                    outputText = cipher.Text;
                     break;
                 case 2:
                     break;
