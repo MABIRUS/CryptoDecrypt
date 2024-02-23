@@ -63,17 +63,24 @@ namespace CryptoDecrypt
             }
         }
 
-        public void CaesarCipher()
+        public void CaesarCipher(int key)
         {
             StringBuilder stringBuilder = new StringBuilder();
             foreach (char letter in Text.ToUpper())
             {
-                if(letter >= 65 && letter <= 77)
-                    stringBuilder.Append((char)(letter + 13));
-                else if (letter > 77 && letter <= 90)
-                    stringBuilder.Append((char)(letter - 13));
+                if (letter >= 'A' && letter <= 'Z')
+                {
+                    int shifted = letter + key;
+                    if (shifted > 'Z')
+                        shifted -= 26;
+                    else if (shifted < 'A')
+                        shifted += 26;
+                    stringBuilder.Append((char)shifted);
+                }
                 else
+                {
                     stringBuilder.Append(letter);
+                }
             }
             Text = stringBuilder.ToString().Trim();
         }
