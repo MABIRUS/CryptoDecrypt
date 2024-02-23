@@ -13,7 +13,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="The source text:" VerticalAlignment="Center" FontSize="12" Margin="5"/>
+        <TextBlock Text="The source text:"  FontSize="12" Margin="5,15,0,0"/>
         <TextBox x:Name="tbSource" Height="70" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" />
 
 
@@ -29,6 +29,6 @@
         </StackPanel>
 
         <TextBox x:Name="tbCrypted" Grid.Row="2" Height="70" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
-        <TextBlock Grid.Row="2" Text="Encrypted text:" VerticalAlignment="Center" FontSize="12" Margin="5"/>
+        <TextBlock Grid.Row="2" Text="Encrypted text:"  FontSize="12" Margin="5,15,0,0"/>
     </Grid>
 </Window>

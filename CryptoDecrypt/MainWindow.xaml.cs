@@ -41,8 +41,21 @@ namespace CryptoDecrypt
                     outputText = cipher.Text;
                     break;
                 case 1:
-                    cipher.CaesarCipher();
-                    outputText = cipher.Text;
+
+                    int key;
+                    KeyWindow keyWindow = new KeyWindow(this);
+
+                    Opacity = 0.7;
+                    keyWindow.ShowDialog();
+                    Opacity = 1;
+
+                    if (int.TryParse(keyWindow.Key, out key))
+                    {
+                        cipher.CaesarCipher(key);
+                        outputText = cipher.Text;
+                    }
+                    else MessageBox.Show( "The key must be a number.", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+
                     break;
                 case 2:
                     break;
