@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CryptoDecrypt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="320" Width="370">
+        Title="MainWindow" Height="350" Width="400">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -13,22 +14,23 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="The source text:"  FontSize="12" Margin="5,15,0,0"/>
-        <TextBox x:Name="tbSource" Height="70" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" />
+        <TextBlock Text="The source text:" FontSize="15" Margin="5,20,0,0"/>
+        <TextBox x:Name="tbSource"/>
 
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="🠁" VerticalAlignment="Center" FontSize="45"/>
-            <Button x:Name="btnDecrypt" Content="Decrypt" FontSize="10" Height="30" Width="70" Margin="5"
-                 Click="btnDecrypt_Click" IsEnabled="False"/>
-            <ComboBox x:Name="cbCipher" Width="120" Height="30"
+            <TextBlock Text="🠁" VerticalAlignment="Center" FontSize="60"/>
+            <Button x:Name="btnDecrypt" Content="Decrypt" Click="btnDecrypt_Click" IsEnabled="False"/>
+            
+            <ComboBox x:Name="cbCipher" Width="120" Height="40" FontSize="15" 
+                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       SelectionChanged="cbCipher_SelectionChanged"/>
-            <Button x:Name="btnEncrypt" Content="Encrypt" FontSize="10" Height="30" Width="70" Margin="5"
-                    Click="btnEncrypt_Click" IsEnabled="False"/>
-            <TextBlock Text="🠃" VerticalAlignment="Center" FontSize="45" />
+            
+            <Button x:Name="btnEncrypt" Content="Encrypt" Click="btnEncrypt_Click" IsEnabled="False"/>
+            <TextBlock Text="🠃" VerticalAlignment="Center" FontSize="60" />
         </StackPanel>
 
-        <TextBox x:Name="tbCrypted" Grid.Row="2" Height="70" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
-        <TextBlock Grid.Row="2" Text="Encrypted text:"  FontSize="12" Margin="5,15,0,0"/>
+        <TextBox x:Name="tbCrypted" Grid.Row="2"/>
+        <TextBlock Grid.Row="2" Text="Encrypted text:" FontSize="15" Margin="5,20,0,0"/>
     </Grid>
 </Window>

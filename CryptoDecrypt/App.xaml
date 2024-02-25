@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:CryptoDecrypt"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Styles/MainWindow/MainWindowButtonStyle.xaml"/>
+                <ResourceDictionary Source="View/Styles/MainWindow/MainWindowTextBoxStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>   
     </Application.Resources>
 </Application>

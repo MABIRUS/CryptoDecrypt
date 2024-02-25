@@ -19,5 +19,8 @@ C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows
 C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\CryptoDecrypt.genruntimeconfig.cache
 C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\ref\CryptoDecrypt.dll
 C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\CryptoDecrypt.sourcelink.json
-C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\KeyWindow.g.cs
-C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\KeyWindow.baml
+C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\App.baml
+C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\View\Styles\MainWindow\MainWindowButtonStyle.baml
+C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\View\Styles\MainWindow\MainWindowTextBoxStyle.baml
+C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\View\Windows\KeyWindow.g.cs
+C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\obj\Debug\net8.0-windows\View\Windows\KeyWindow.baml
