@@ -7,15 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="KeyWindow.xaml.cs">
+    <Compile Update="View\Windows\KeyWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="KeyWindow.xaml">
+    <Page Update="View\Windows\KeyWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Styles\MainWindow\MainWindowButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Styles\MainWindow\MainWindowTextBoxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\MABIRUS\Desktop\C#\CryptoDecrypt\CryptoDecrypt\App.xaml
-2-1431741085
+41192404425
 
-8475246075
+8-1356907226
 1981451641563
-KeyWindow.xaml;MainWindow.xaml;
+MainWindow.xaml;View\Styles\MainWindow\MainWindowButtonStyle.xaml;View\Styles\MainWindow\MainWindowTextBoxStyle.xaml;View\Windows\KeyWindow.xaml;
 
 True
 
